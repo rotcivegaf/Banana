@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-import {TokenBase} from "./bananaTokens/TokenBase.sol";
+import {ITokenBase} from "./ITokenBase.sol";
+import {ERC20} from "openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 /// @notice Minimalist and gas efficient standard ERC1155 and ERC20 implementations creating a ERC403.
 /// @notice using Solmate as base template (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC1155.sol)
@@ -26,15 +27,15 @@ abstract contract ERC403 {
                              ERC1155 STORAGE
     //////////////////////////////////////////////////////////////*/
 
-    mapping(uint256 tokenId => TokenBase token) public tokenIdToERC20;
+    mapping(uint256 tokenId => address token) public tokenIdToERC20;
 
     function balanceOf(address owner, uint256 id) public view returns (uint256) {
-        TokenBase token = tokenIdToERC20[id];
-        if (address(token) == address(0)) {
+        address token = tokenIdToERC20[id];
+        if (token == address(0)) {
             return 0;
         }
         // @notice round down
-        return token.balanceOf(owner) / 1 ether;
+        return ERC20(token).balanceOf(owner) / ERC20(token).decimals();
     }
 
     mapping(address => mapping(address => bool)) public isApprovedForAll;
@@ -59,13 +60,12 @@ abstract contract ERC403 {
         public
         virtual
     {
-        TokenBase token = tokenIdToERC20[id];
-        require(address(token) != address(0), "INVALID_ID");
+        address token = tokenIdToERC20[id];
+        require(token != address(0), "INVALID_ID");
 
         require(msg.sender == from || isApprovedForAll[from][msg.sender], "NOT_AUTHORIZED");
 
-        // @notice amount in items has no decimals, so `* 1 ether` transform it in token
-        token.erc1155Transfer(from, to, amount * 1 ether);
+        ITokenBase(token).erc1155Transfer(from, to, amount);
 
         emit TransferSingle(msg.sender, from, to, id, amount);
 
@@ -95,12 +95,12 @@ abstract contract ERC403 {
 
         for (uint256 i = 0; i < ids.length;) {
             id = ids[i];
-            TokenBase token = tokenIdToERC20[id];
-            require(address(token) != address(0), "INVALID_ID");
+            address token = tokenIdToERC20[id];
+            require(token != address(0), "INVALID_ID");
 
             amount = amounts[i];
 
-            token.erc1155Transfer(from, to, amount);
+            ITokenBase(token).erc1155Transfer(from, to, amount);
 
             // An array can't have a total length
             // larger than the max uint256 value.
@@ -154,9 +154,9 @@ abstract contract ERC403 {
     //////////////////////////////////////////////////////////////*/
 
     function _mint(address to, uint256 id, uint256 amount, bytes memory data) internal virtual {
-        TokenBase token = tokenIdToERC20[id];
-        require(address(token) != address(0), "No token");
-        token.mint(to, amount * 1 ether);
+        address token = tokenIdToERC20[id];
+        require(token != address(0), "No token");
+        ITokenBase(token).mint(to, amount);
 
         emit TransferSingle(msg.sender, address(0), to, id, amount);
 
@@ -178,9 +178,9 @@ abstract contract ERC403 {
         require(idsLength == amounts.length, "LENGTH_MISMATCH");
 
         for (uint256 i = 0; i < idsLength;) {
-            TokenBase token = tokenIdToERC20[ids[i]];
-            require(address(token) != address(0), "No token");
-            token.mint(to, amounts[i] * 1 ether);
+            address token = tokenIdToERC20[ids[i]];
+            require(token != address(0), "No token");
+            ITokenBase(token).mint(to, amounts[i]);
 
             // An array can't have a total length
             // larger than the max uint256 value.

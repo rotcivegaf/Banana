@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity 0.8.26;
 
 import {Owned} from "solmate/auth/Owned.sol";
 import {ERC403} from "./ERC403.sol";
-import {TokenBase} from "./bananaTokens/TokenBase.sol";
+import {ITokenBase} from "./ITokenBase.sol";
 
 interface IUriContract {
     function uri(uint256 id) external view returns (string memory);
@@ -13,7 +13,7 @@ contract Banana is ERC403, Owned {
     event SetUriContract(IUriContract uriContract);
     event SetMinZeros(uint256 minZeros);
     event ApproveToMint(address sender, address minter, bool value);
-    event AddToken(TokenBase token, uint256 id);
+    event AddToken(address bananaToken, uint256 id);
 
     bytes32 constant private F = 0xF000000000000000000000000000000000000000000000000000000000000000;
     string public name = "Banana";
@@ -107,10 +107,10 @@ contract Banana is ERC403, Owned {
         }
     }
 
-    function addToken(TokenBase token, uint160 id) external onlyOwner {
-        require(address(tokenIdToERC20[id]) == address(0), "id assigned");
+    function addToken(address bananaToken, uint256 id) external onlyOwner {
+        require(tokenIdToERC20[id] == address(0), "id assigned");
 
-        tokenIdToERC20[id] = token;
-        emit AddToken(token, id);
+        tokenIdToERC20[id] = bananaToken;
+        emit AddToken(bananaToken, id);
     }
 }
