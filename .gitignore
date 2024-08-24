@@ -1,0 +1,5 @@
+/contracts/out/
+/contracts/cache/solidity-files-cache.json
+/contracts/lib/
+/front/node_modules/
+/contracts/cache/
