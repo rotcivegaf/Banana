@@ -9,11 +9,10 @@
     let difficulty; // get the start difficulty(leading zeros)
 
     onMount(async () => {
+        difficulty = Number(await minZeros());
         coresSelected = parseInt(localStorage.getItem('cores') || '1');
         cores = Math.min(navigator.hardwareConcurrency, 10);
         window.mintBatch = mintBatch;
-
-        difficulty = Number(await minZeros());
     })
 
     let minDif = "0";
@@ -273,11 +272,11 @@
 <div class="nes-select">
   <select id="default_select" bind:value={minDif}>
     <option value="0" disabled selected>Select...</option>
-    <option value="6">Normal</option>
-    <option value="7">Steel</option>
-    <option value="8">Golden</option>
-    <option value="9">Crystal</option>
-    <option value="10">Mystic</option>
+    <option value="4">Normal</option>
+    <option value="5">Steel</option>
+    <option value="6">Golden</option>
+    <option value="7">Crystal</option>
+    <option value="8">Mystic</option>
   </select>
 </div>
 

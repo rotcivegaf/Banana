@@ -1,15 +1,15 @@
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi'
 
-import { avalancheFuji } from 'viem/chains';
+import { avalancheFuji, arbitrumSepolia, polygonZkEvmCardona } from 'viem/chains';
 
 import { reconnect } from '@wagmi/core'
 import { getAccount } from '@wagmi/core'
+import { get } from 'svelte/store';
 
 import { writable, derived } from "svelte/store";
 
 // const projectId = import.meta.env.VITE_WEB3MODAL_PROJECT_ID;
 const projectId = "619498c450ee42530036acb486570472";
-
 
 // export const provider = writable();
 
@@ -30,7 +30,7 @@ export function initWeb3() {
   }
 
   const _config = defaultWagmiConfig({
-    chains: [avalancheFuji], // required
+    chains: [avalancheFuji, arbitrumSepolia, polygonZkEvmCardona], // required
     projectId, // required
     metadata, // required
     ssr:false,
@@ -70,3 +70,13 @@ export const chainId = derived(modal, $modal => {
     return 0;
   }
 });
+
+
+export function getBananaAddr() {
+  if(get(config).state.chainId == avalancheFuji.id) // Avalanche Fuji
+    return '0x4C21515b92F488A02AC44d8FE2878e00E270A42a';
+  else if(get(config).state.chainId == arbitrumSepolia.id) // Arbitrum Sepolia
+    return '0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED';
+  else if(get(config).state.chainId == polygonZkEvmCardona.id) // Polygon ZkEvm Cardona
+    return '0x0702224dc991BD1adBecAA291188f200319E28bA';
+} 

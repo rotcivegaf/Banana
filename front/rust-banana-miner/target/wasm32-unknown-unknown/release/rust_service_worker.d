@@ -1,1 +1,0 @@
-/home/rotciv/workspace/hackatones/Banana/front/rust-banana-miner/target/wasm32-unknown-unknown/release/rust_service_worker.wasm: /home/rotciv/workspace/hackatones/Banana/front/rust-banana-miner/src/lib.rs
