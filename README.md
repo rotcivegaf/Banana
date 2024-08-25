@@ -5,7 +5,7 @@ Welcome to Banana Idle Miner, an innovative idle mining game that combines the e
 We have created a new ERC, the ERC403, which makes it possible for each ERC1155 id to be an ERC20.
 
 The ERC1155 ID `0` is the voting contract, with which the future of the project can be decided, the community can choose:
-- Create new banana ERC20 tokens 
+- Create new banana ERC20 tokens
 - Choose its icon
 - The type of ERC20 (fee on transfer, rebasing, burning, auto liquidity, etc)
 - Choose and change mining difficulty
@@ -115,12 +115,12 @@ Types of Banana
 -   **Crystal Banana**: A transparent Banana with multicolored reflections.
 -   **Mystic Banana**: An Banana covered in ancient runes, emitting a faint purple glow.
 
-
+TODO
 ------------
 
 - [Front] Inventory page
 - Create independent minters for each erc20, for each erc115 id a different minter could be configured.
-- Each erc115 id would have an id based on the token, allowing it to have the same id in all chains and to be bridged from one chain to another.
+- Each erc1155 id would have an id based on the token, allowing it to have the same id in all chains and to be bridged from one chain to another.
 - Add a zk paymaster to be able to subsidize transactions
 
 Contributing
