@@ -94,6 +94,14 @@ connect your wallet
 - BananaFeeOnTransfer.sol[3]: [0xc20f09af14e1361d1ca1660eb498093f8a2658e2](https://sepolia.arbiscan.io/address/0xc20f09af14e1361d1ca1660eb498093f8a2658e2#code)
 - BananaFeeOnTransfer.sol[4]: [0x97083d15dfbb424c0b7c26bd011cc908d3845700](https://sepolia.arbiscan.io/address/0x97083d15dfbb424c0b7c26bd011cc908d3845700#code)
 
+### ZKSync Sepolia
+
+- Banana.sol: [0x861F099f925f1040f24eE13D92ca2ad811052B01](https://sepolia.explorer.zksync.io/address/0x861F099f925f1040f24eE13D92ca2ad811052B01#transactions)
+- BananaVoting.sol: [0x8e46BffdE5755b5bec77adF558f67e194f3a8Dc1](https://sepolia.explorer.zksync.io/address/0x8e46BffdE5755b5bec77adF558f67e194f3a8Dc1)
+- BananaFeeOnTransfer.sol[1]: [0xfA5df1c248B93667ff977Ef0d299082B35D336cC](https://sepolia.explorer.zksync.io/address/0xfA5df1c248B93667ff977Ef0d299082B35D336cC)
+- BananaFeeOnTransfer.sol[2]: [0xd0261714778AB5442A2837CdF36f5CFA8f9c70FC](https://sepolia.explorer.zksync.io/address/0xd0261714778AB5442A2837CdF36f5CFA8f9c70FC)
+- BananaFeeOnTransfer.sol[3]: [0x4EaDaC09648a2e79DC928afa46D6bfF291EBAC91](https://sepolia.explorer.zksync.io/address/0x4EaDaC09648a2e79DC928afa46D6bfF291EBAC91)
+- BananaFeeOnTransfer.sol[4]: [0x23574Fa463C51315489177830cf26f761c9db39c](https://sepolia.explorer.zksync.io/address/0x23574Fa463C51315489177830cf26f761c9db39c)
 
 ## Usage
 -----
