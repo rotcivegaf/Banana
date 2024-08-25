@@ -46,11 +46,17 @@ connect your wallet
 
 ## Deployments
 
-- BNB Contract: [0x4c21515b92f488a02ac44d8fe2878e00e270a42a](https://testnet.bscscan.com/address/0x4c21515b92f488a02ac44d8fe2878e00e270a42a#code)
-    - TODO TX: []()
+### Avalanche(AVAX)
 
-- opBNB Contract: [0x4c21515b92f488a02ac44d8fe2878e00e270a42a](https://opbnb-testnet.bscscan.com/address/0x4c21515b92f488a02ac44d8fe2878e00e270a42a#code)
-    - TODO TX: []()
+- Banana.sol: [0x4C21515b92F488A02AC44d8FE2878e00E270A42a](https://subnets-test.avax.network/c-chain/address/0x4C21515b92F488A02AC44d8FE2878e00E270A42a)
+- BananaVoting.sol: [0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B](https://subnets-test.avax.network/c-chain/address/0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B)
+- BananaFeeOnTransfer.sol[1]: [0x4f818C1e8ed8852eD5c84D4198b5E2659008586a](https://subnets-test.avax.network/c-chain/address/0x4f818C1e8ed8852eD5c84D4198b5E2659008586a)
+- BananaFeeOnTransfer.sol[2]: [0xC54Ae1172a7E671002C3bf73c8D75e54C9D2EFFe](https://subnets-test.avax.network/c-chain/address/0xC54Ae1172a7E671002C3bf73c8D75e54C9D2EFFe)
+- BananaFeeOnTransfer.sol[3]: [0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14](https://subnets-test.avax.network/c-chain/address/0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14)
+- BananaFeeOnTransfer.sol[4]: [0x4C743c69E88F146d4dd434cB662024C86c2F0997](https://subnets-test.avax.network/c-chain/address/0x4C743c69E88F146d4dd434cB662024C86c2F0997)
+
+### [Polygon ZKEVM cardona](https://cardona-zkevm.polygonscan.com/)
+
 
 ## Usage
 -----
@@ -76,6 +82,10 @@ TODO
 ------------
 
 - [Front] Inventory page
+- crear minters, por cada erc115 id se podria configurar un minter distinto
+- cada erc115 id tendria una id en base al token, permitiendo que en todas las chains tenga el mismo id y que se pueda bridgear de una chain a otra
+- zk paymaste
+- avax chain?
 
 Contributing
 ------------
