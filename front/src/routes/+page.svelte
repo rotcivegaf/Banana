@@ -9,7 +9,7 @@
     let difficulty; // get the start difficulty(leading zeros)
 
     onMount(async () => {
-        difficulty = Number(await minZeros());
+        difficulty = 4;
         coresSelected = parseInt(localStorage.getItem('cores') || '1');
         cores = Math.min(navigator.hardwareConcurrency, 10);
         window.mintBatch = mintBatch;
