@@ -1,12 +1,7 @@
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi'
-
-import { avalancheFuji, arbitrumSepolia, polygonZkEvmCardona } from 'viem/chains';
-
-import { reconnect } from '@wagmi/core'
-import { getAccount } from '@wagmi/core'
-import { get } from 'svelte/store';
-
-import { writable, derived } from "svelte/store";
+import { reconnect, getAccount } from '@wagmi/core'
+import { get, writable, derived } from 'svelte/store';
+import { bscTestnet, opBNBTestnet } from 'viem/chains';
 
 // const projectId = import.meta.env.VITE_WEB3MODAL_PROJECT_ID;
 const projectId = "619498c450ee42530036acb486570472";
@@ -30,7 +25,7 @@ export function initWeb3() {
   }
 
   const _config = defaultWagmiConfig({
-    chains: [avalancheFuji, arbitrumSepolia, polygonZkEvmCardona], // required
+    chains: [bscTestnet, opBNBTestnet], // required
     projectId, // required
     metadata, // required
     ssr:false,
@@ -73,10 +68,10 @@ export const chainId = derived(modal, $modal => {
 
 
 export function getBananaAddr() {
-  if(get(config).state.chainId == avalancheFuji.id) // Avalanche Fuji
-    return '0x4C21515b92F488A02AC44d8FE2878e00E270A42a';
-  else if(get(config).state.chainId == arbitrumSepolia.id) // Arbitrum Sepolia
-    return '0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED';
-  else if(get(config).state.chainId == polygonZkEvmCardona.id) // Polygon ZkEvm Cardona
-    return '0x0702224dc991BD1adBecAA291188f200319E28bA';
+  if(get(config).state.chainId == bscTestnet.id) // bscTestnet
+    return '0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B';
+  else if(get(config).state.chainId == opBNBTestnet.id) // opBNBTestnet
+    return '0x171be1088EC661c510B3e688913A6dC039b7e470';
+  else 
+    throw new Error("Wrong chain");    
 } 

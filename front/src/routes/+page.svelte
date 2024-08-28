@@ -1,7 +1,7 @@
 <script lang="ts">
     import { modal , account, loadReady} from '$lib/store';
     import {onMount} from 'svelte';
-    import { minZeros, getSalt, mintBatch } from '$lib/contracts.ts';
+    import { minZeros, getSalt, mintBatch } from '$lib/contracts';
 
     let salt;
     let cores = 0;
@@ -9,7 +9,7 @@
     let difficulty; // get the start difficulty(leading zeros)
 
     onMount(async () => {
-        difficulty = 4;
+        difficulty = 6;
         coresSelected = parseInt(localStorage.getItem('cores') || '1');
         cores = Math.min(navigator.hardwareConcurrency, 10);
         window.mintBatch = mintBatch;
@@ -218,27 +218,27 @@
                     <tr>
                         <td>Normal Banana</td>
                         <td>{items.normal.length}</td>
-                        <td>{difficulty}</td>
+                        <td>6</td>
                     </tr>
                     <tr>
                         <td>Steel Banana</td>
                         <td>{items.steel.length}</td>
-                        <td>{difficulty + 1}</td>
+                        <td>7</td>
                     </tr>
                     <tr>
                         <td>Golden Banana</td>
                         <td>{items.golden.length}</td>
-                        <td>{difficulty + 2}</td>
+                        <td>8</td>
                     </tr>
                     <tr>
                         <td>Crystal Banana</td>
                         <td>{items.crystal.length}</td>
-                        <td>{difficulty + 3}</td>
+                        <td>9</td>
                     </tr>
                     <tr>
                         <td>Mystic Banana</td>
                         <td>{items.mystic.length}</td>
-                        <td>{difficulty + 4}</td>
+                        <td>10</td>
                     </tr>
 
                 </tbody>
@@ -272,11 +272,11 @@
 <div class="nes-select">
   <select id="default_select" bind:value={minDif}>
     <option value="0" disabled selected>Select...</option>
-    <option value="4">Normal</option>
-    <option value="5">Steel</option>
-    <option value="6">Golden</option>
-    <option value="7">Crystal</option>
-    <option value="8">Mystic</option>
+    <option value="6">Normal</option>
+    <option value="7">Steel</option>
+    <option value="8">Golden</option>
+    <option value="9">Crystal</option>
+    <option value="10">Mystic</option>
   </select>
 </div>
 
