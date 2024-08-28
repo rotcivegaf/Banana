@@ -59,49 +59,28 @@ connect your wallet
 
 ## Deployments
 
-### Avalanche(AVAX)
+### Bsc Testnet
 
-- Banana.sol: [0x4C21515b92F488A02AC44d8FE2878e00E270A42a](https://subnets-test.avax.network/c-chain/address/0x4C21515b92F488A02AC44d8FE2878e00E270A42a)
-    - Transaction `mintBatch`: [0xdde7e66bb5985aba1bc361eb74a43a9458a04999db823085451fe72c926fe544](https://testnet.snowtrace.io/tx/0xdde7e66bb5985aba1bc361eb74a43a9458a04999db823085451fe72c926fe544?chainid=43113)
-    - Transaction `mintBatch`: [0x64ec0716162120b8780d00e95a813c2607707f36bb784b228638f3964a8b6681](https://testnet.snowtrace.io/tx/0x64ec0716162120b8780d00e95a813c2607707f36bb784b228638f3964a8b6681?chainid=43113)
-- BananaVoting.sol: [0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B](https://subnets-test.avax.network/c-chain/address/0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B)
-- BananaFeeOnTransfer.sol[1]: [0x4f818C1e8ed8852eD5c84D4198b5E2659008586a](https://subnets-test.avax.network/c-chain/address/0x4f818C1e8ed8852eD5c84D4198b5E2659008586a)
-- BananaFeeOnTransfer.sol[2]: [0xC54Ae1172a7E671002C3bf73c8D75e54C9D2EFFe](https://subnets-test.avax.network/c-chain/address/0xC54Ae1172a7E671002C3bf73c8D75e54C9D2EFFe)
-- BananaFeeOnTransfer.sol[3]: [0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14](https://subnets-test.avax.network/c-chain/address/0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14)
-- BananaFeeOnTransfer.sol[4]: [0x4C743c69E88F146d4dd434cB662024C86c2F0997](https://subnets-test.avax.network/c-chain/address/0x4C743c69E88F146d4dd434cB662024C86c2F0997)
-
-
-### Polygon ZkEvm Cardona
-
-- Banana.sol: [0x0702224dc991BD1adBecAA291188f200319E28bA](https://cardona-zkevm.polygonscan.com/address/0x0702224dc991bd1adbecaa291188f200319e28ba#code)
-    - Transaction `mintBatch`: [0x439173bf93c195486fa0ada4339f00c3fe65702661f53e8515753320eefc9974](https://cardona-zkevm.polygonscan.com/tx/0x439173bf93c195486fa0ada4339f00c3fe65702661f53e8515753320eefc9974)
-    - Transaction `mintBatch`: [0x01bf09303b41fbe8bcd2d133c0c11ebe0243f8e08b91465e2a6815245e89a1ab](https://cardona-zkevm.polygonscan.com/tx/0x01bf09303b41fbe8bcd2d133c0c11ebe0243f8e08b91465e2a6815245e89a1ab)
-- BananaVoting.sol: [0xb82a4c77a57a08109d9ec0f338a944f1d4f7229b](https://cardona-zkevm.polygonscan.com/address/0xb82a4c77a57a08109d9ec0f338a944f1d4f7229b#code)
-- BananaFeeOnTransfer.sol[1]: [0xc54ae1172a7e671002c3bf73c8d75e54c9d2effe](https://cardona-zkevm.polygonscan.com/address/0xc54ae1172a7e671002c3bf73c8d75e54c9d2effe#code)
-- BananaFeeOnTransfer.sol[2]: [0x3ec5c0a31d779cded116741bc3e0f2713e39ca14](https://cardona-zkevm.polygonscan.com/address/0x3ec5c0a31d779cded116741bc3e0f2713e39ca14#code)
-- BananaFeeOnTransfer.sol[3]: [0x4c743c69e88f146d4dd434cb662024c86c2f0997](https://cardona-zkevm.polygonscan.com/address/0x4c743c69e88f146d4dd434cb662024c86c2f0997#code)
-- BananaFeeOnTransfer.sol[4]: [0xad43abaed15e41176f666df2935f1249560e4456](https://cardona-zkevm.polygonscan.com/address/0xad43abaed15e41176f666df2935f1249560e4456#code)
+- Banana.sol: [0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B](https://testnet.bscscan.com/address/0xB82A4C77a57A08109D9EC0f338a944f1D4f7229B)
+    - Transaction `mintBatch`: [0xc3bca9c9a8ff3c7cde69ae5a7c9648374da0c054271837e8167953214e9343f5](https://testnet.bscscan.com/tx/0xc3bca9c9a8ff3c7cde69ae5a7c9648374da0c054271837e8167953214e9343f5)
+    - Transaction `mintBatch`: [0x8ccce25e1933833772d0d9e0c47c26320e06473de705829a0d10e794f8f98be3](https://testnet.bscscan.com/tx/0x8ccce25e1933833772d0d9e0c47c26320e06473de705829a0d10e794f8f98be3)
+- BananaVoting.sol: [0x4f818C1e8ed8852eD5c84D4198b5E2659008586a](https://testnet.bscscan.com/address/0x4f818C1e8ed8852eD5c84D4198b5E2659008586a)
+- BananaFeeOnTransfer.sol[1]: [0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14](https://testnet.bscscan.com/address/0x3Ec5C0A31D779cdEd116741bc3E0f2713E39CA14)
+- BananaFeeOnTransfer.sol[2]: [0xAd43AbaeD15e41176F666DF2935f1249560e4456](https://testnet.bscscan.com/address/0xAd43AbaeD15e41176F666DF2935f1249560e4456)
+- BananaFeeOnTransfer.sol[3]: [0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED](https://testnet.bscscan.com/address/0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED)
+- BananaFeeOnTransfer.sol[4]: [0x9d8D5DDc5596E821816c0f31c7A1dD2ef1C1C5AA](https://testnet.bscscan.com/address/0x9d8D5DDc5596E821816c0f31c7A1dD2ef1C1C5AA)
 
 
-### Arbitrum Sepolia
+### OPBNB Testnet Network
 
-- Banana.sol: [0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED](https://sepolia.arbiscan.io/address/0x617f1025F1e41Df21d02b35a2DbbA1a0725420ED#code)
-    - Transaction `mintBatch`: [0x2597e4ad78f291f6b0eee9cde09cb5f87a882598c597221acab4690cb87cec3a](https://sepolia.arbiscan.io/tx/0x2597e4ad78f291f6b0eee9cde09cb5f87a882598c597221acab4690cb87cec3a)
-    - Transaction `mintBatch`: [0xce4149fad729639c62577c141946c3789fc3d20019f864259ea1f813ec5a0bf7](https://sepolia.arbiscan.io/tx/0xce4149fad729639c62577c141946c3789fc3d20019f864259ea1f813ec5a0bf7)
-- BananaVoting.sol: [0x9d8d5ddc5596e821816c0f31c7a1dd2ef1c1c5aa](https://sepolia.arbiscan.io/address/0x9d8d5ddc5596e821816c0f31c7a1dd2ef1c1c5aa#code)
-- BananaFeeOnTransfer.sol[1]: [0x18fccdec6584f1f39201f62c00ee6299ed8433e2](https://sepolia.arbiscan.io/address/0x18fccdec6584f1f39201f62c00ee6299ed8433e2#code)
-- BananaFeeOnTransfer.sol[2]: [0x433cdcf08f8ad1652cdea5b719d98f365b14355c](https://sepolia.arbiscan.io/address/0x433cdcf08f8ad1652cdea5b719d98f365b14355c#code)
-- BananaFeeOnTransfer.sol[3]: [0xc20f09af14e1361d1ca1660eb498093f8a2658e2](https://sepolia.arbiscan.io/address/0xc20f09af14e1361d1ca1660eb498093f8a2658e2#code)
-- BananaFeeOnTransfer.sol[4]: [0x97083d15dfbb424c0b7c26bd011cc908d3845700](https://sepolia.arbiscan.io/address/0x97083d15dfbb424c0b7c26bd011cc908d3845700#code)
-
-### ZKSync Sepolia
-
-- Banana.sol: [0x861F099f925f1040f24eE13D92ca2ad811052B01](https://sepolia.explorer.zksync.io/address/0x861F099f925f1040f24eE13D92ca2ad811052B01#transactions)
-- BananaVoting.sol: [0x8e46BffdE5755b5bec77adF558f67e194f3a8Dc1](https://sepolia.explorer.zksync.io/address/0x8e46BffdE5755b5bec77adF558f67e194f3a8Dc1)
-- BananaFeeOnTransfer.sol[1]: [0xfA5df1c248B93667ff977Ef0d299082B35D336cC](https://sepolia.explorer.zksync.io/address/0xfA5df1c248B93667ff977Ef0d299082B35D336cC)
-- BananaFeeOnTransfer.sol[2]: [0xd0261714778AB5442A2837CdF36f5CFA8f9c70FC](https://sepolia.explorer.zksync.io/address/0xd0261714778AB5442A2837CdF36f5CFA8f9c70FC)
-- BananaFeeOnTransfer.sol[3]: [0x4EaDaC09648a2e79DC928afa46D6bfF291EBAC91](https://sepolia.explorer.zksync.io/address/0x4EaDaC09648a2e79DC928afa46D6bfF291EBAC91)
-- BananaFeeOnTransfer.sol[4]: [0x23574Fa463C51315489177830cf26f761c9db39c](https://sepolia.explorer.zksync.io/address/0x23574Fa463C51315489177830cf26f761c9db39c)
+- Banana.sol: [0x171be1088EC661c510B3e688913A6dC039b7e470](https://opbnb-testnet.bscscan.com/address/0x171be1088EC661c510B3e688913A6dC039b7e470)
+    - Transaction `mintBatch`: [0x55643a063646cce5538d362c3d95d680f461c216b1ba988ddb9a2859d824aa96](https://opbnb-testnet.bscscan.com/tx/0x55643a063646cce5538d362c3d95d680f461c216b1ba988ddb9a2859d824aa96)
+    - Transaction `mintBatch`: [0x0fb7041bee2d9e985332bb0fbc79562bdafc68c3836bdc38a1f78bd95dd9cef0](https://opbnb-testnet.bscscan.com/tx/0x0fb7041bee2d9e985332bb0fbc79562bdafc68c3836bdc38a1f78bd95dd9cef0)
+- BananaVoting.sol: [0x308Ceb8D7D2C46D91Eae43607Ee4C8E148301556](https://opbnb-testnet.bscscan.com/address/0x308Ceb8D7D2C46D91Eae43607Ee4C8E148301556)
+- BananaFeeOnTransfer.sol[1]: [0x40B2d31DbFa1cb93D55CD0B4a2280036a6816Fb5](https://opbnb-testnet.bscscan.com/address/0x40B2d31DbFa1cb93D55CD0B4a2280036a6816Fb5)
+- BananaFeeOnTransfer.sol[2]: [0x88aC16f126419D10ECc97036c87f456d8464B936](https://opbnb-testnet.bscscan.com/address/0x88aC16f126419D10ECc97036c87f456d8464B936)
+- BananaFeeOnTransfer.sol[3]: [0x04e7157E00d52e4540f7bEC64ba332D6074aafb5](https://opbnb-testnet.bscscan.com/address/0x04e7157E00d52e4540f7bEC64ba332D6074aafb5)
+- BananaFeeOnTransfer.sol[4]: [0xD5184d59E4FEeCD1Ff728fb0471aF36CD0704e91](https://opbnb-testnet.bscscan.com/address/0xD5184d59E4FEeCD1Ff728fb0471aF36CD0704e91)
 
 ## Usage
 -----
